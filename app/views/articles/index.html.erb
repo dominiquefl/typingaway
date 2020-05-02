@@ -1,4 +1,4 @@
-<h1>Listing Articles</h1>
+<h1>The stream of consciousness</h1>
 <table>
   <tr>
     <th>Title</th>
@@ -12,9 +12,9 @@
         <tr>
           <td><div class="article-title"><%= link_to article.title, article_path(article) %></div></td>
           <td><div class="article-body"><%= truncate(article.description, length:200) %></div></td>
-          <td><%= link_to 'Edit', edit_article_path(article), class: "btn-default" %></td>
+          <td><%= link_to 'Edit', edit_article_path(article), class: "button" %></td>
           <td><%= link_to 'Destroy', article_path(article),
-                  class: "btn-default",
+                  class: "button",
                   method: :delete,
                   data: { confirm: 'Are you sure?' } %></td>
         </tr>
