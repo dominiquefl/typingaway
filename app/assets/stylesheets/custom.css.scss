@@ -3,12 +3,6 @@ $navbar-default-bg: white;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-  background-size: 40px 40px;
-  background-image: radial-gradient(circle, #810073 1px, rgba(0, 0, 0, 0) 1px);
-  font-family: Courier
-}
-
 #logo {
  float: left;
  font-size: 1.7em;

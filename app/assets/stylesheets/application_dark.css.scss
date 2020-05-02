@@ -1,15 +1,18 @@
-/* app/assets/layout.scss */
-$navbar-default-bg: white;
+/* app/assets/application_dark.scss */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$navbar-default-bg: white;
+
 body {
+  
+  color: rgb(180, 180, 180);
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
-  background: #f2f5f8;
+  background: #1b1b2f;
   background-size: 40px 40px;
-  background-image: radial-gradient(circle, #2275a5 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: radial-gradient(circle, #1f4068 1px, rgba(0, 0, 0, 0) 1px);
   
   font-weight: 300;
 }
@@ -18,15 +21,15 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6
+p, h1, h2, h3, h4, h5, h6
 {
-  color: black;
+  color: rgb(180, 180, 180);
 }
 
 .button {
-  background-color: #f2f5f8;
-  border: 1px solid #f2f5f8;
-  color: cornflowerblue;
+  background-color: #1b1b2f;
+  border: 1px solid #1b1b2f;
+  color: rgb(180, 180, 180);
   // padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -34,24 +37,23 @@ h1, h2, h3, h4, h5, h6
   font-size: 16px;
 }
 .button-form { 
-  border: 1px solid cornflowerblue;
-  background-color: white;
+  border: 1px solid mediumseagreen;
 }
 .button:hover {
-  background-color: cornflowerblue;
-  color: #f2f5f8;
-  border: 1px solid cornflowerblue;
+  background-color: mediumseagreen;
+  color: black;
+  border: 1px solid mediumseagreen;
  }
 
 #logo {
  float: left;
  font-size: 1.7em;
- color: black;
+ color: #eaeaea;
  text-transform: uppercase;
  letter-spacing: 1px;
 }
 #logo:hover {
- color: tomato;
+ color: #e43f5a;
  text-decoration: none;
 }
 .article-actions {
@@ -59,21 +61,21 @@ h1, h2, h3, h4, h5, h6
  padding-top: 5px;
 }
 .article-title {
-color: cornflowerblue;
+ color: cornflowerblue;
  font-weight: bold;
 }
 .article-body {
- color: rgb(53, 53, 53);
+ color: rgb(180, 180, 180);
  border-top: 1px solid #eaeaea;
  padding-top: 15px;
  padding-bottom: 15px;
 }
 .article-meta-details {
- border-top: 1px solid #eaeaea;
+ border-top: 1px solid #5c5c5c;
  margin-top: 15px;
 }
 .description {
-  color: rgb(97, 43, 221);
+color: rgb(97, 43, 221);
  margin-top: 0;
 }
 .listing {
@@ -81,6 +83,6 @@ color: cornflowerblue;
  padding-left: 0;
 }
 .form-control{ 
-  background-color: #fff;
-  color: #555555;
+  background-color: #120136;
+  color: #dbdbdb;
 }
