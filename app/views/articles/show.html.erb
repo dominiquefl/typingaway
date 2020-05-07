@@ -14,7 +14,7 @@
 </p>
 
 <% if @article.comments.present? %>
-  <h2>Comments</h2>
+  <h2>Comments (<%= @article.comments.size %>)</h2>
   <%= render @article.comments %>
 <% end %>
 
