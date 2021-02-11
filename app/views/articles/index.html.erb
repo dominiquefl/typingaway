@@ -1,15 +1,17 @@
 <h1>The stream of consciousness</h1>
 <table>
   <tr>
+    <th>Written on</th>
     <th>Title</th>
     <th>Text</th>
     <th colspan="3"></th>
   </tr>
- 
+
   <% @articles.each do |article| %>
     <div class="row">
       <div class="col-xs-8 col-xs-offset-2">
         <tr>
+          <td><div class="article-created-at"><%= link_to article.created_at.to_date, article_path(article) %></div></td>
           <td><div class="article-title"><%= link_to article.title, article_path(article) %></div></td>
           <td><div class="article-body"><%= truncate(article.description, length:200) %></div></td>
           <td><%= link_to 'Edit', edit_article_path(article), class: "button" %></td>
@@ -22,3 +24,7 @@
     </div>
   <% end %>
 </table>
+<style type="text/css">
+  td { padding:0 15px; }
+  th { padding:0 15px; }
+</style>
