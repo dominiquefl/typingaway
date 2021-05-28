@@ -15,7 +15,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><%= link_to "Articles", articles_path %></li>
+
         <li><%= link_to "Create Article", new_article_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Manage Authors", authors_path %></li>
+        <% end %>
+
         <li><% if cookies[:moon] %>
           <%= link_to 'Light Mode', sun_path, method: :get%>
         <% else %>

@@ -1,36 +1,36 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
-  http_basic_authenticate_with name: "dominiquefl", password: "secret"
-  
+  # http_basic_authenticate_with name: "dominiquefl", password: "secret"
+
   def index
     @articles = Article.all
   end
 
-  def show 
+  def show
     @article = Article.find(params[:id])
-  end 
-  
-  def new 
+  end
+
+  def new
     @article = Article.new
   end
 
-  def edit 
+  def edit
     @article = Article.find(params[:id])
   end
 
-  def create 
+  def create
     @article = Article.new(article_params)
 
-    if @article.save 
+    if @article.save
       flash[:success]="Great work! Your thoughts have been shared."
-      redirect_to @article 
+      redirect_to @article
     else
       flash.now[:danger]="Darn! Fix the mistakes and try again."
-      render 'new' 
+      render 'new'
     end
   end
 
-  def update 
+  def update
     @article = Article.find(params[:id])
 
     if @article.update(article_params)
@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-    
+
     redirect_to articles_path
   end
 end
