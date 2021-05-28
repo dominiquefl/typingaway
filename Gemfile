@@ -19,6 +19,8 @@ group :production do
   gem 'pg'
 end
 
+# Sorcery authentication app, https://github.com/Sorcery/sorcery#installation
+gem 'sorcery'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
